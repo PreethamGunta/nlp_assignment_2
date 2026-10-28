@@ -1,0 +1,182 @@
+[
+  {
+    "sent_idx": 0,
+    "tok_idx": 18,
+    "word": "kind",
+    "gold": "JJ",
+    "neural": "NN",
+    "hmm": "NN",
+    "context": "mode : kind and gentle"
+  },
+  {
+    "sent_idx": 0,
+    "tok_idx": 20,
+    "word": "gentle",
+    "gold": "JJ",
+    "neural": "NN",
+    "hmm": "JJ",
+    "context": "kind and gentle ."
+  },
+  {
+    "sent_idx": 2,
+    "tok_idx": 7,
+    "word": "chief",
+    "gold": "NN",
+    "neural": "JJ",
+    "hmm": "JJ",
+    "context": "chairman and chief executive officer"
+  },
+  {
+    "sent_idx": 2,
+    "tok_idx": 16,
+    "word": "forest-product",
+    "gold": "NN",
+    "neural": "JJ",
+    "hmm": "NN",
+    "context": "leading the forest-product concern 's"
+  },
+  {
+    "sent_idx": 4,
+    "tok_idx": 0,
+    "word": "So",
+    "gold": "IN",
+    "neural": "RB",
+    "hmm": "RB",
+    "context": "So far ,"
+  },
+  {
+    "sent_idx": 5,
+    "tok_idx": 3,
+    "word": "prepared",
+    "gold": "VBN",
+    "neural": "JJ",
+    "hmm": "VBN",
+    "context": "We are prepared to pursue"
+  },
+  {
+    "sent_idx": 5,
+    "tok_idx": 6,
+    "word": "aggressively",
+    "gold": "RB",
+    "neural": "JJ",
+    "hmm": "RB",
+    "context": "to pursue aggressively completion of"
+  },
+  {
+    "sent_idx": 7,
+    "tok_idx": 26,
+    "word": "fall",
+    "gold": "NN",
+    "neural": "VB",
+    "hmm": "NN",
+    "context": "the company fall into the"
+  },
+  {
+    "sent_idx": 16,
+    "tok_idx": 6,
+    "word": "in",
+    "gold": "RP",
+    "neural": "IN",
+    "hmm": "IN",
+    "context": "Hahn called in state police"
+  },
+  {
+    "sent_idx": 17,
+    "tok_idx": 1,
+    "word": "impressed",
+    "gold": "VBN",
+    "neural": "VBD",
+    "hmm": "JJ",
+    "context": "That impressed Robert B."
+  },
+  {
+    "sent_idx": 17,
+    "tok_idx": 8,
+    "word": "chief",
+    "gold": "NN",
+    "neural": "JJ",
+    "hmm": "JJ",
+    "context": "Georgia-Pacific 's chief executive at"
+  },
+  {
+    "sent_idx": 17,
+    "tok_idx": 9,
+    "word": "executive",
+    "gold": "JJ",
+    "neural": "NN",
+    "hmm": "NN",
+    "context": "'s chief executive at the"
+  },
+  {
+    "sent_idx": 19,
+    "tok_idx": 21,
+    "word": "on",
+    "gold": "IN",
+    "neural": "RB",
+    "hmm": "IN",
+    "context": "possessed early on ."
+  },
+  {
+    "sent_idx": 22,
+    "tok_idx": 6,
+    "word": "physics",
+    "gold": "NN",
+    "neural": "NNS",
+    "hmm": "NNS",
+    "context": "in nuclear physics from the"
+  },
+  {
+    "sent_idx": 26,
+    "tok_idx": 2,
+    "word": "as",
+    "gold": "RB",
+    "neural": "IN",
+    "hmm": "IN",
+    "context": "Taking over as chief executive"
+  },
+  {
+    "sent_idx": 26,
+    "tok_idx": 3,
+    "word": "chief",
+    "gold": "NN",
+    "neural": "JJ",
+    "hmm": "JJ",
+    "context": "over as chief executive officer"
+  },
+  {
+    "sent_idx": 28,
+    "tok_idx": 7,
+    "word": "vinyl",
+    "gold": "NN",
+    "neural": "JJ",
+    "hmm": "JJ",
+    "context": "that made vinyl checkbook covers"
+  },
+  {
+    "sent_idx": 29,
+    "tok_idx": 17,
+    "word": "while",
+    "gold": "NN",
+    "neural": "IN",
+    "hmm": "IN",
+    "context": "the company while refocusing building"
+  },
+  {
+    "sent_idx": 29,
+    "tok_idx": 18,
+    "word": "refocusing",
+    "gold": "NN",
+    "neural": "VBG",
+    "hmm": "VBG",
+    "context": "company while refocusing building products"
+  },
+  {
+    "sent_idx": 34,
+    "tok_idx": 15,
+    "word": "best",
+    "gold": "JJS",
+    "neural": "RBS",
+    "hmm": "RB",
+    "context": "company knows best ."
+  }
+]
