@@ -153,13 +153,19 @@ def apply_word_dropout(word_id, word_freq, alpha=WORD_DROP_A):
 
 class POSDataset(Dataset):
     def __init__(self, sentences, word2idx, char2idx, tag2idx,
-                 word_freq=None, train_mode=False):
+                 word_freq=None, train_mode=False, word_dropout_alpha=None,
+                 use_charcnn=True):
         self.data       = sentences
         self.word2idx   = word2idx
         self.char2idx   = char2idx
         self.tag2idx    = tag2idx
         self.word_freq  = word_freq
         self.train_mode = train_mode
+        self.use_charcnn = use_charcnn
+        if word_dropout_alpha is None:
+            self.word_dropout_alpha = WORD_DROP_A
+        else:
+            self.word_dropout_alpha = word_dropout_alpha
 
     def __len__(self):
         return len(self.data)
@@ -172,11 +178,14 @@ class POSDataset(Dataset):
         tag_ids  = [self.tag2idx[t] for t in tags]
 
         # Word dropout (training only) — character sequences untouched
-        if self.train_mode and self.word_freq is not None:
-            word_ids = [apply_word_dropout(wid, self.word_freq) for wid in word_ids]
+        if self.train_mode and self.word_freq is not None and self.word_dropout_alpha and self.word_dropout_alpha > 0:
+            word_ids = [apply_word_dropout(wid, self.word_freq, self.word_dropout_alpha) for wid in word_ids]
 
         # Character indices — keep original case for capitalisation cue
-        char_ids = [word_to_char_ids(w, self.char2idx) for w in words]
+        if self.use_charcnn:
+            char_ids = [word_to_char_ids(w, self.char2idx) for w in words]
+        else:
+            char_ids = None
 
         return (
             torch.tensor(word_ids, dtype=torch.long),
@@ -193,6 +202,10 @@ def collate_fn(batch):
     word_pad = pad_sequence(word_seqs, batch_first=True, padding_value=PAD_IDX)
     # Pad targets with IGNORE=-100, NOT 0 (which is a real tag index!)
     tag_pad  = pad_sequence(tag_seqs,  batch_first=True, padding_value=IGNORE)
+
+    if char_seqs_batch and char_seqs_batch[0] is None:
+        char_pad = None
+        return word_pad, char_pad, tag_pad, lengths
 
     B = len(word_seqs)
     T = word_pad.size(1)
